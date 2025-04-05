@@ -1,0 +1,60 @@
+// ================= 一般設置 =================
+
+fps_max "400" // 將FPS上限調整至400, 若設定為0, 則為無上限
+viewmodel_presetpos 3 // 持槍視角：1:預設 2:寫實 3:經典
+viewmodel_offset_x "2.5" // 在x軸上的位置,調整持槍視角 (-2 to 2.5)
+viewmodel_offset_y "0" // 以y軸上的位置,調整持槍視角 (-2 to 2)
+viewmodel_offset_z "-1.5" // 以z軸上的位置,調整持槍視角 (-2 to 2)
+viewmodel_fov "68" // 調整可視範圍 (54 to 68)
+
+// ================= CS2一鍵跳丟 =================
+
+alias +jp "+jump;-jump" // 一鍵大跳丟, v鍵可自行調整成習慣用任意鍵
+alias +ak "-attack;-attack2"
+bind v "+jp;+ak"
+
+alias +fd "+forward" // 一鍵前跑大跳丟, h鍵可自行調整成習慣用任意鍵
+alias -fd "-forward"
+bind h "+fd;+jp;+ak"
+ // ================= 跑圖專用設定 =================
+
+sv_cheats "1" // 開啟後才能於個人房間中使用作弊模式
+bind alt noclip // 可自由飛行、穿牆, alt鍵可自行調整成習慣用任意鍵
+sv_infinite_ammo "1" // 子彈無限
+sv_grenade_trajectory_prac_pipreview 1 // 丟手雷時會顯示落點於左下角
+sv_grenade_trajectory_prac_trailtime 5 // 丟手雷的白線時長
+ammo_grenade_limit_total "6" // 可持手雷數量上限
+mp_warmup_end // 結束暖場
+mp_freezetime "0" // 凍結時長
+mp_roundtime "60" // 每局時長(分)
+mp_roundtime_defuse "60" // 每局可拆彈時長(分)
+sv_showimpacts "2" // 顯示子彈擊中位置 0:關閉 1:同時顯示客戶端(紅)與伺服器端(藍) 2:只顯示客戶端(紅) 3:只顯示伺服器端(藍)
+mp_limitteams "0" // 兩隊隊員數最大差異量, 0為關閉
+mp_autoteambalance "0" // 隊伍關閉自動平衡
+mp_maxmoney "99999" // 地圖金錢上限
+mp_startmoney "99999" // 地圖起始資金
+mp_buytime "9999" // 可購買時長
+mp_buy_anywhere "1" // 到處都能夠購買
+
+ mp_restartgame "1" // 重新啟動地圖
+mp_ignore_round_win_conditions 1 // 此指令可用於啟用和停用回合獲勝條件，如果停用回合獲勝條件，將不再導致回合結束 - 回合將永遠持續，直到手動結束
+sv_regeneration_force_on 1 // 開啟自動補血
+
+// ================= 手雷細節設定 =================
+
+bind j sv_rethrow_last_grenade // 一鍵重丟前一次丟出的手雷, j鍵可自行調整成習慣用任意鍵
+bind c ent_fire smokegrenade_projectile kill // 一鍵消除煙霧, c鍵可自行調整成習慣用任意鍵
+
+// === 電腦BOT設定 ===
+
+bot_stop 1 // 電腦BOT停止移動
+bot_chatter off // 電腦BOT不要吵
+
+mp_respawn_on_death_t 1 // 電腦BOT死掉後立即重生
+mp_respawnwavetime_t 0
+mp_respawn_on_death_ct 1
+mp_respawnwavetime_ct 0
+
+bind p bot_place // 指定電腦BOT位置, p鍵可自行調整成習慣用任意鍵
+bind [ bot_add // 增加電腦BOT, 【鍵可自行調整成習慣用任意鍵
+bind] bot_kick // 移除電腦BOT, [鍵可自行調整成習慣用任意鍵
